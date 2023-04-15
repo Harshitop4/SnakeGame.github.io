@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.Container{
+    width:100vw;
+    height: 100vh;
+    background: url('snakebg.jpg');
+    display: grid;
+    grid-template-columns: 1fr 3fr 1.5fr;
+}
+#Score {
+    color: rgb(245 0 0);
+    font-size: 3rem;
+    margin-top: 50px;
+    background-color: black;
+    border-radius: 8px;
+    padding: 3px;
+    margin-left: 0.5rem;
+}
+.board{
+    width: 700px;
+    height: 700px;
+    background: linear-gradient(rgb(71, 162, 10),rgb(235, 235, 7));
+    margin: auto;
+    border: 15px solid black;
+    border-radius: 32px;
+    display: grid;
+    grid-template-columns: repeat(18,1fr);
+    grid-template-rows: repeat(18,1fr);
+}
+.snake img{
+    width: 500px;
+    height: 500px;
+    margin-top: 111px;
+    position: fixed;
+    right: -20px;
+}
+#start{
+    position: absolute;
+    top: 50vh;
+    right: 50vw;
+    background-color: #6330b6;
+    color: antiquewhite;
+    width: 200px;
+    height: 39px;
+    border-radius: 10px;
+    font-size: 32px;
+    cursor: pointer;
+}
+#start:hover{
+    color: black;
+}
+#info{
+    position: absolute;
+    top: 40vh;
+    right: 37vw;
+    color: antiquewhite;
+    font-size: 108px;
+    font-weight: 800;
+}
+
+.head{
+    background-color: red;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.body{
+    background-color: rgb(56, 93, 213);
+    border: 2px solid black;
+    border-radius: 60px;
+}
+.food{
+    background-color: rgb(68, 22, 22);
+    border-radius: 6px;
+}
+/* #count {
+    position: absolute;
+    height: 5rem;
+    width: 5rem;
+    font-size: 5rem;
+    left: 50%;
+} */
+
+@media screen and (max-width:1500px){
+    .board{
+        width: 600px;
+        height: 600px;
+    }
+    .snake img{
+        width: 300px;
+        height: 300px;
+        margin-top: 25vh;
+    }
+}
+@media screen and (max-width:1050px){
+    .board{
+        width: 500px;
+        height: 500px;
+    }
+    .snake img{
+        width: 200px;
+        height: 200px;
+        margin-top: 25vh;
+    }
+}
+@media screen and (max-width:800px){
+    .board{
+        width: 400px;
+        height: 400px;
+    }
+    .snake img{
+        display: none;
+    }
+    #start{
+        width: 100px;
+        height: 30px;
+        font-size: 22px;
+    }
+    #Score{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:550px){
+    .board{
+        width: 300px;
+        height: 300px;
+    }
+}
+@media screen and (max-width:450px){
+    .board{
+        width: 200px;
+        height: 200px;
+        grid-template-columns: repeat(15,1fr);
+        grid-template-rows: repeat(15,1fr);
+        border-width: 2px;
+    }
+}
